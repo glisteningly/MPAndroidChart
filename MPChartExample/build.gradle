@@ -3,10 +3,10 @@ apply plugin: 'realm-android'
 
 android {
     compileSdkVersion 25
-    buildToolsVersion '25.0.0'
+    buildToolsVersion '25.0.3'
     defaultConfig {
         minSdkVersion 16
-        targetSdkVersion 25
+//        targetSdkVersion 25
         versionCode 55
         versionName '3.0.2'
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -39,7 +39,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.3.0'
+        classpath 'com.android.tools.build:gradle:3.0.0-beta6'
         //classpath 'io.realm:realm-gradle-plugin:0.88.2'
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -58,8 +58,8 @@ dependencies {
     //compile project(':MPChartLib-Realm') // clone "https://github.com/PhilJay/MPAndroidChart-Realm" to get this or uncomment the gradle dependency below:
     compile 'com.github.PhilJay:MPAndroidChart-Realm:v2.0.2@aar'
 
-    compile project(':MPChartLib')
-    compile 'com.android.support:appcompat-v7:24.2.1'
-    //compile 'io.realm:realm-android:0.87.5' // dependency for realm-database API (http://realm.io)
-    //compile 'com.github.PhilJay:MPAndroidChart:v2.2.5'
+    implementation project(':MPChartLib')
+//    compile 'com.github.PhilJay:MPAndroidChart:v3.0.2'
+    compile 'com.android.support:appcompat-v7:25.4.0'
+//    compile 'io.realm:realm-android:0.87.5' // dependency for realm-database API (http://realm.io)
 }
